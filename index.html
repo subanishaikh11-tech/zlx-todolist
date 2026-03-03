@@ -28,13 +28,39 @@
       flex-wrap: wrap;
     }
 
-    .logo {
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      background: #ffd966;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e4f;
+      box-shadow: 0 4px 0 #b8aa98;
+      transform: rotate(-5deg);
+      transition: 0.2s;
+    }
+
+    .logo-img:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+
+    .logo-text {
       font-size: 1.8rem;
       font-weight: 600;
       color: #f0e8dc;
       letter-spacing: 2px;
     }
-    .logo span {
+    .logo-text span {
       color: #ffd966;
     }
 
@@ -59,6 +85,7 @@
       color: #2c3e4f;
     }
 
+    /* rest of your CSS remains exactly the same from here */
     /* main container */
     .container {
       max-width: 1000px;
@@ -411,9 +438,12 @@
   </style>
 </head>
 <body>
-  <!-- navigation -->
+  <!-- navigation with logo added -->
   <nav class="navbar">
-    <div class="logo">TO-DO LIST <span>WALA</span></div>
+    <div class="logo-container">
+      <div class="logo-img">📋</div>
+      <div class="logo-text">TO-DO LIST <span>WALA</span></div>
+    </div>
     <div class="nav-links">
       <span class="nav-link active" data-section="home">HOME</span>
       <span class="nav-link" data-section="todo">TO-DO LIST</span>
@@ -422,6 +452,7 @@
     </div>
   </nav>
 
+  <!-- rest of your HTML remains exactly the same from here -->
   <!-- main container -->
   <div class="container">
     <!-- HOME section -->
